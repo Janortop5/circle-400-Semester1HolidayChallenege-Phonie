@@ -22,6 +22,15 @@ function startApp() {
   function check(e) {
     const stringify = `${e.target.value}`
         console.log(stringify)
+    if(stringify[0] == '0'){
+      createEl('Number already starts with 0')
+    }
+
+    if(stringify.length < 1){
+      let select = document.querySelector('.checked')
+      container.removeChild(select)
+    }
+    
     if(activeNetwork != ''){
       activeNetwork = ''
       console.log('new', activeNetwork)
@@ -57,13 +66,17 @@ function startApp() {
     
   }
 
+  function createEl (value){
+    const newElement = document.createElement('div')
+    newElement.classList.add('checked')
+    newElement.innerHTML = `${value}`
+    container.append(newElement)
+  }
+
   
   function addChild(activeNetwork){
     if(activeNetwork.length > 8){
-        const newElement = document.createElement('div')
-        newElement.classList.add('checked')
-        newElement.innerHTML = `${activeNetwork}`
-        container.append(newElement)
+        createEl(activeNetwork)
       }else{
           const img = document.createElement('img')
           img.classList.add('network')
@@ -73,21 +86,11 @@ function startApp() {
       }
   }
   
-  function throttle (callback, limit) {
-  var wait = false;
-  return function (e) {
-    if (!wait) {
-      callback.apply(null, arguments);
-      wait = true;
-      setTimeout(function () {
-        wait = false;
-      }, limit);
-    }
-  }
-}
 
 
-    input.addEventListener('change', throttle(check,2000))
+    input.addEventListener('input', (e) => {
+      check(e)
+    })
     
   };
   
