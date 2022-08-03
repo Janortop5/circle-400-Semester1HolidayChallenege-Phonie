@@ -3,19 +3,35 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'DM Sans';
+    color: #170F49
 }
 
 body{
   width:100vw;
   height: 100vh;
   position: relative;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+ 
+}
 
+span{
+  color: #4A3AFF
 }
 
 .main{
   display: flex;
-   height: 515px;
-  
+/*    height: 500px;  */
+  padding-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cop{
+  color: #6F6C90;
+  margin-top: 10px;
 }
 
 .flex_container1 {
@@ -53,17 +69,33 @@ input{
   border: none;
   outline: none;
   flex-grow: 1;
+  font-size: 16px !important; 
+}
+
+.doc{
+  width:90% !important;
+  flex-grow: 0;
 }
 
 .box{
+  position: relative;
   display: flex;
   border: 1px solid #EFF0F6;
   border-radius: 46px;
-  margin-top: 33px;
+  margin-top: 13px;
   padding: 10px 20px;
-  
+  align-items:center;
+/*   gap: 10px */
 }
 
+.zero{
+  color: #897170;
+}
+
+.code{
+  color: #897170;
+  padding: 0px 10px;
+}
 
 .logo{
   height: 31px;
@@ -103,11 +135,19 @@ img.image{
   height: 25px;
   width: 25px;
 }
+.network{
+  height: 30px;
+  width: 50px;
+}
 
 footer{
-  position:fixed;
+  position:absolute;
   bottom:0;
   width:100%
+}
+
+.logo-text{
+  color: #170F49;
 }
 
 .button{
@@ -126,7 +166,22 @@ footer{
   transform: scale(1.07)
 }
 
+.checked{
+  color: #897170;
+  width: 100%;
+  text-align: center;
+}
+
+
 @media screen and (max-width: 774px){
+/*   body{
+    height: 100vh;
+  } */
+
+  footer{
+    position: relative;
+    margin-top: 40px;
+  }
   .right-side{
     display:none;
   }
@@ -135,4 +190,27 @@ footer{
     width: 100%;
     justify-content: center;
   }
+
+  .logo-text{
+    padding-left: 10px;
+  }
+  .main{
+    padding-bottom: 50px;
+  }
+
+  .flex_container1{
+    padding: 20px 30px;
+  }
+}
+
+
+@media (min-width:774px) and (max-width: 920px){
+/*     body{
+        height: max-content;
+      } */
+      footer{
+        position: relative;
+        margin-top: 80px;
+      }
+      
 }

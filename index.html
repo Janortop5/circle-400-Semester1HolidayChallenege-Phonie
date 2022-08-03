@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--   <meta name='viewport' content='user-scalable=0'> -->
     <title>Phonie</title>
     <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
       <section class="flex_container1">
         <img class='logo' src='./public/logo.png' alt='logo' />
-        <h1>Phonie</h1>
+        <h1 class='logo-text'>Phon<span>ie</span></h1>
       </section>
     </nav>
     
@@ -29,9 +31,13 @@
           <input type='password' placeholder='Password' />
           <img src='./public/lock.png' alt='password'>
         </div>
-        <div class='box'>
-          <input type='tel' placeholder='Phone number' />
-          <img src='./public/user.png' alt='user'>
+        <div class='contain'>
+          <div class='box append'>
+            <div class='code'>+234</div>
+            <div class='zero'>0</div>
+            <input class='doc' type='tel'                 
+            placeholder='70xxxxxxxx' />
+          </div>
         </div>
 
         <button class='button'>Register</button>
@@ -47,9 +53,9 @@
         <section class="flex_container2">
           <div class='logo-con'>
             <img class='logo2' src='./public/logo.png' alt='logo' />
-            <h3>Phonie</h3>
+            <h3 class='logo-text'>Phon<span>ie</span></h3>
           </div>
-            <p>Copyright © Phonie | All Rights Reserved</p>
+            <p class='cop'>Copyright © Phonie | All Rights Reserved</p>
         </section>
     </footer>
 
