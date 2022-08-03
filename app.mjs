@@ -18,22 +18,15 @@ function startApp() {
   
     let activeNetwork = ''
 
+    let state = false
 
   function check(e) {
     const stringify = `${e.target.value}`
         console.log(stringify)
-    if(stringify[0] == '0'){
-      createEl('Number already starts with 0')
-    }
-
-    if(stringify.length < 1){
-      let select = document.querySelector('.checked')
-      container.removeChild(select)
-    }
+    
     
     if(activeNetwork != ''){
       activeNetwork = ''
-      console.log('new', activeNetwork)
       let select = document.querySelector('.checked')
       let selectImg = document.querySelector('.network')
       if(selectImg) box.removeChild(selectImg)
